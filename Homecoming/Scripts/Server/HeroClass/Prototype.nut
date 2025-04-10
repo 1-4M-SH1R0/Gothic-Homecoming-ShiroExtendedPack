@@ -594,7 +594,21 @@ class PrototypeHero {
 			this.setAcrobaticTalent(true);
 		}
 
-		if(!isNpc(id)){
+		if("random" in params)
+		{
+			if(params.random == 0)
+			{
+				local randomVisual = createRandomCharacter(creator_gender.MALE)
+				this.setVisual(randomVisual[0],randomVisual[1],randomVisual[2],randomVisual[3])
+			} 
+			else if (params.random == 1)
+			{
+				local randomVisual = createRandomCharacter(creator_gender.FEMALE)
+				this.setVisual(randomVisual[0],randomVisual[1],randomVisual[2],randomVisual[3])
+			}
+		}
+		else
+		{
 			this.setVisual(
 				"visual" in params ? params.visual[0] : getPlayerVisual(id).bodyModel, //"HUM_BODY_NAKED0",
 				"visual" in params ? params.visual[1] : getPlayerVisual(id).bodyTxt, //8,
