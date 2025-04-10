@@ -52,6 +52,7 @@
 				<script src="Server/HeroClass/Prototype.nut" type="server" />
 				<script src="Server/HeroClass/Player.nut" type="server" />
 				<script src="Server/HeroClass/NPC.nut" type="server" />
+				<script src="Server/SRandomVisual.nut" type="server" />
 		<!-- Tables -->
 			<!-- NPCs -->
 				<script src="Server/NPCs/NEWWORLD.nut" type="server" />
